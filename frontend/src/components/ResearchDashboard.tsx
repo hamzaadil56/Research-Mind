@@ -100,16 +100,16 @@ const ResearchAIDashboard: React.FC = () => {
             <p className="text-[#FFFFFF] text-base font-normal leading-normal pb-3 pt-1 px-4 text-center">
               Describe your project and get feedback from Research AI
             </p>
-            <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-              <label className="flex flex-col min-w-40 flex-1">
+            <div className="flex flex-col justify-center items-center max-w-[480px] gap-4 px-4 py-3">
+              <label className="flex flex-col w-full">
                 <input
-                  className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#FFFFFF] focus:outline-0 focus:ring-0 border border-[#2F3B46] bg-[#1B2127] focus:border-[#2F3B46] h-14 placeholder:text-[#9BACBB] p-[15px] text-base font-normal leading-normal"
+                  className="form-input w-full resize-none overflow-hidden rounded-xl text-[#FFFFFF] focus:outline-0 focus:ring-0 border border-[#2F3B46] bg-[#1B2127] focus:border-[#2F3B46] h-14 placeholder:text-[#9BACBB] p-[15px] text-base font-normal leading-normal"
                   value=""
                 />
               </label>
             </div>
-            <div className="flex px-4 py-3">
-              <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 flex-1 bg-[#27313A] text-[#FFFFFF] text-sm font-bold leading-normal tracking-[0.015em]">
+            <div className="flex justify-center px-4 py-3">
+              <button className="flex cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#27313A] text-[#FFFFFF] text-sm font-bold leading-normal tracking-[0.015em]">
                 <span className="truncate">Submit</span>
               </button>
             </div>
