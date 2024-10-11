@@ -1,5 +1,4 @@
 import os
-from crewai import Agent
 from pydantic import BaseModel
 from openai import OpenAI
 from typing import List
@@ -27,7 +26,8 @@ project_advisor = [
             "knowledge of existing work in the domain, suggests new directions, additional areas of focus, or potential improvements. "
             "Its goal is to inspire innovation and guide the researcher towards making impactful contributions, ensuring that the "
             "research or project is well-rounded, up-to-date, and positioned to address critical gaps in the field. This agent "
-            "helps researchers think beyond their immediate focus and explore opportunities for growth."
+            "helps researchers think beyond their immediate focus and explore opportunities for growth. The model will also give "
+            "estimated times for the project timeline and will develop a thorough and complete path for the given final year project "
         )
     }
 ]
