@@ -62,25 +62,25 @@ def core_gpt_model(messages: List) -> str:
         response = client.chat.completions.create(
             model="gpt-4-0613",  # Supports function calling
             messages=messages,
-            functions=tools_func,  # Add the functions you want to expose
-            function_call="auto"  # Let GPT decide when to call the function
+            # functions=tools_func,  # Add the functions you want to expose
+            # function_call="auto"  # Let GPT decide when to call the function
         )
 
         # Check if the response contains a function call
-        if response['choices'][0]['message'].get('function_call'):
-            # Extract function arguments
-            function_name = response['choices'][0]['message']['function_call']['name']
-            function_args = json.loads(response['choices'][0]['message']['function_call']['arguments'])
+        # if response['choices'][0]['message'].get('function_call'):
+        #     # Extract function arguments
+        #     function_name = response['choices'][0]['message']['function_call']['name']
+        #     function_args = json.loads(response['choices'][0]['message']['function_call']['arguments'])
 
-            # Call the appropriate function based on function_name
-            if function_name == "research_fyps":
-                result = research_fyps(**function_args)
-            elif function_name == "advisory_call":
-                result = advisory_call(**function_args)
-            else:
-                result = "Function not recognized."
+        #     # Call the appropriate function based on function_name
+        #     if function_name == "research_fyps":
+        #         result = research_fyps(**function_args)
+        #     elif function_name == "advisory_call":
+        #         result = advisory_call(**function_args)
+        #     else:
+        #         result = "Function not recognized."
             
-            return result
+        #     return result
         
         # Return the model's response (strip any leading/trailing whitespace)
         return response['choices'][0]['message']['content'].strip()
