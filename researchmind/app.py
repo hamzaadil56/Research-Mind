@@ -1,5 +1,5 @@
 # Import the required agents
-from new_agents import OldFypAgent, ProjectAdvisorAgent
+from models import OldFypAgent, ProjectAdvisorAgent
 
 
 def genai_research_assistant(agent_type: str, input_data: str) -> str:
@@ -27,12 +27,12 @@ def genai_research_assistant(agent_type: str, input_data: str) -> str:
 
 # Previous Final Year Projects Task
 fyp_topic = "Study the impact of acid rain on concrete infused with PVC"
-result_research = genai_research_assistant(agent_type="research", input_data=fyp_topic)
+result_research = genai_research_assistant(agent_type="OldFypAgent", input_data=fyp_topic)
 print(f"Research Results for '{fyp_topic}':\n{result_research}")
 
 
 # Project Advisor Task
 fyp_topic = "Study the impact of acid rain on concrete infused with PVC"
-result_suggestion = genai_research_assistant(agent_type="suggestion", input_data=fyp_topic)
-print(f"Suggestions for '{fyp_topic}':\n{result_suggestion}")
+result_suggestion = genai_research_assistant(agent_type="ProjectAdvisorAgent", input_data=fyp_topic)
+print(f"Advice for '{fyp_topic}':\n{result_suggestion}")
 
